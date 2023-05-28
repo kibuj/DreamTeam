@@ -1,0 +1,152 @@
+.buttonCalculator {
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.7em 2.4em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: #63DD3A;
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.buttonCalculator span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 4px solid #63DD3A;
+}
+
+.buttonCalculator span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: var(--lightgray);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.3s;
+}
+
+.buttonCalculator:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: #63DD3A;
+}
+
+.buttonCalculator:hover {
+  color: white;
+}
+
+.buttonCalculator:active span::before {
+  background: #63DD3A;
+}
+
+.contentCalculator {
+  	max-width: 500px;
+  	margin: 0 auto;
+  	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  	padding: 25px;
+	background-color: #fff;
+	border:solid black 0px;
+	border-radius: 50px;
+}
+
+.marginDown{
+    margin-top: 20px;
+}
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+}
+.flex-align-center {
+    align-items: center;
+}
+.inputWidth{
+    max-width: 85px;
+    border:solid #63DD3A 1px;
+    border-radius: 5px;
+}
+.inputMargin input {
+    margin-right: 40px;
+}
+.horizontal-text {
+    display: inline-block;
+}
+.pRight{
+    margin-right: 1px;
+}
+.pLeft{
+    margin-left: 90px;
+}
+input[type="radio"]:checked + label {
+    color: #63DD3A;
+}
+
+input[type="radio"]:checked + label::before {
+    background-color: #63DD3A;
+}
+input[type="radio"]:checked{
+    background-color: #63DD3A;
+}
+.h-left{
+    margin-left: 6px;
+}
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  border: solid #65FA4E 1px;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 300px;
+  font-size: 14px;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  color: rgba(51, 65, 85, 1);
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #66E154;
+  font-weight: 600;
+}
+.gender-left{
+    margin-left: 75px;
+}
+.margin-div{
+    margin: 0 40px;
+}

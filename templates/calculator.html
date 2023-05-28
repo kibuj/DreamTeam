@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block title %}Calculator{% endblock %}
+
+{% block content %}
+	<form class="contentCalculator" method="POST" action="{{ url_for('calculator') }}">
+		<h1 class="flex flex-center" style="color: #6D9E47">Gender</h1>
+		<div class=" marginDown gender-left radio-inputs">
+  			<label class="radio">
+  			  <input type="radio" name="gender" value="male" checked="">
+  			  <span class="name">Male</span>
+  			</label>
+  			<label class="radio">
+  			  <input type="radio" name="gender" value="female">
+  			  <span class="name">Female</span>
+  			</label>
+		</div>
+		<br><br>
+		<div class="flex flex-center">
+			<div class="margin-div">
+				<h1 style="color: #6D9E47">Age</h1>
+				<input class="inputWidth" type="text" name="age" id="age" required>
+			</div>
+			<div class="margin-div">
+				<h1 style="color: #6D9E47">Height</h1>
+				<input class="inputWidth" type="text" name="height" id="height" required>
+			</div>
+			<div class="margin-div">
+				<h1 style="color: #6D9E47">Weight</h1>
+				<input class="inputWidth" type="text" name="weight" id="weight" required>
+			</div>
+		</div>
+		<br><br>
+		<div>
+			<div style="color: #6D9E47" class="h-left"><h1>Physical activity</h1></div>
+			<div>
+				<input type="radio" name="activity" id="activity1" value="1.2" required>
+				<label for="activity1">Sedentary  </label>
+			</div>
+			<div class="marginDown">
+				<input type="radio" name="activity" id="activity2" value="1.375" required>
+				<label for="activity2">Lightly Active </label>
+			</div>
+			<div class="marginDown">
+				<input type="radio" name="activity" id="activity3" value="1.55" required>
+				<label for="activity3">Moderately Active </label>
+			</div>
+			<div class="marginDown">
+				<input type="radio" name="activity" id="activity4" value="1.725" required>
+				<label for="activity4">Very Active </label>
+			</div>
+			<div class="marginDown">
+				<input type="radio" name="activity" id="activity5" value="1.9" required>
+				<label for="activity5">Extra Active </label>
+			</div>
+			<div class="flex flex-center marginDown">
+			<button type="submit" class="buttonCalculator span">Calculate
+  				<span></span>
+			</button>
+		</div>
+		</div>
+
+		<br><br>
+
+	</form>
+	<form class=" marginDown contentCalculator">
+	{% if daily_calories %}
+		<div >
+			<div>
+				<h1 style="color: #6D9E47">Your daily calorie needs are:</h1>
+			</div>
+			<div>
+				<p> {{ daily_calories }}  calories.</p>
+			</div>
+		</div>
+
+
+	{% endif %}
+	</form>
+
+{% endblock %}
